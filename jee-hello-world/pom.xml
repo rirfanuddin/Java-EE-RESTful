@@ -7,6 +7,27 @@
     <groupId>id.rirfanuddin</groupId>
     <artifactId>jee-hello-world</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!--  finalName to deploy, localhost:8080/{finalName}, same as with url in server  -->
+    <build>
+        <finalName>jee-hello-world</finalName>
+    </build>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>
